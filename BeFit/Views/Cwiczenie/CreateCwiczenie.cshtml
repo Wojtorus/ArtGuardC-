@@ -1,0 +1,32 @@
+﻿@using BeFit.Infrastructure.CwiczenieRepositories.DTO
+@model CwiczenieDTO
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Create</h1>
+                <form asp-action="CreateCwiczenie" autocomplete="off">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                <label asp-for="NazwaCwiczenia" class="control-label"></label>
+                <input asp-for="NazwaCwiczenia" class="form-control" />
+                <span asp-validation-for="NazwaCwiczenia" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                <label asp-for="ObciazenieKg" class="control-label"></label>
+                <input asp-for="ObciazenieKg" class="form-control" />
+                <span asp-validation-for="ObciazenieKg" class="text-danger"></span>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-primary w-100" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <a asp-action="Index" class="btn btn-secondary  w-100">View All</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
